@@ -8,9 +8,16 @@ public class Philosopher extends Thread {
     private String name;
 
     public Philosopher(String name, Chopstick first, Chopstick second) {
+        // in this way the 5th philosopher cannot hold the first chopstick
+        // when the other 4 have hold 4
+        if (first.getId() > second.getId()) {
+            this.left = second;
+            this.right = first;
+        }else {
+            this.left = first;
+            this.right = second;
+        }
         this.name = name;
-        this.left = first;
-        this.right = second;
         this.random = new Random();
     }
 

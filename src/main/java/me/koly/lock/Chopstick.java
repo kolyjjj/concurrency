@@ -1,9 +1,13 @@
 package me.koly.lock;
 
 public class Chopstick {
-    private Integer id;
+    private int id;
 
-    public Chopstick(Integer id) {
+    public Chopstick(int id) {
         this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
     }
 }
