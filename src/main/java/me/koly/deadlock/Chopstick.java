@@ -1,4 +1,4 @@
-package me.koly.lock;
+package me.koly.deadlock;
 
 public class Chopstick {
     private int id;
